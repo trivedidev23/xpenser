@@ -6,7 +6,9 @@ import { ToastContainer, toast } from "react-toastify";
 
 const ExpenseList = () => {
   const { expenseList: list, query } = useSelector((state) => state.expenses);
-  const filteredList = list.filter((item) => item.title.includes(query));
+  const filteredList = Array.isArray(list)
+    ? list.filter((item) => item.title.includes(query))
+    : [];
   const notifySuccess = () => toast.success("Expense Deleted");
 
   return (

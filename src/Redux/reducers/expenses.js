@@ -9,8 +9,8 @@ const initialList = () => {
   let expenses = [];
   if (list) {
     expenses = JSON.parse(list);
-    return expenses;
   }
+  return expenses;
 };
 
 const initialState = {
