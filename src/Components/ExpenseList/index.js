@@ -3,6 +3,7 @@ import Card from "./card";
 import "./expenseList.css";
 import { useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
+import Total from "../total expense";
 
 const ExpenseList = () => {
   const { expenseList: list, query } = useSelector((state) => state.expenses);
