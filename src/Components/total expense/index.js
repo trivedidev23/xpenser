@@ -9,16 +9,20 @@ const Total = ({ list }) => {
     }, 0);
 
   return (
-    <div className="card">
-      <div className="card-info">
-        <label className="card-title">Total</label>
-      </div>
-      <div className="card-right">
-        <div>
-          <label className="card-amount">₹ {totalPrice}</label>
+    <>
+      {list.length && (
+        <div className="card">
+          <div className="card-info">
+            <label className="card-title">Total</label>
+          </div>
+          <div className="card-right">
+            <div>
+              <label className="card-amount">₹ {totalPrice}</label>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 
